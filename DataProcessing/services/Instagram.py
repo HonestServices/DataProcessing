@@ -305,7 +305,7 @@ class InstagramService(BaseService):
                         f"https://www.instagram.com/{username}",
                         wait_until="domcontentloaded",
                     )
-                    async with timeout(30):
+                    async with timeout(40):
                         data = await fut
                     if data is False:
                         log.warning("Returning invalid user for {}", username)
