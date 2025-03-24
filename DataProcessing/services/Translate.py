@@ -55,7 +55,7 @@ class TranslationService(BaseService):
     ) -> Optional[TranslationResponse]:
         url = "https://www.google.com/async/translate"
         headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36"
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
         }
         data = {
             "async": f"translate,sl:{parse_language(source_language) if source_language != 'auto' else source_language},tl:{parse_language(target_language)},st:{text},id:{-randrange(9e10)},qc:true,ac:true,_id:tw-async-translate,_pms:s,_fmt:pc"

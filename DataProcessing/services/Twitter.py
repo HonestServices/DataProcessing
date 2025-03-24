@@ -14,22 +14,22 @@ from .Base import BaseService, cache
 REQUEST_USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
 REQUEST_PLATFORMS = ["Linux", "Windows"]
 HEADERS = {
-    "Cookie": 'guest_id=v1%3A170966731960022089; kdt=Tn4Yb03uRpenO0Oy23JpkAQzSrXMNUcJhb8B25iJ; auth_token=af412a83297ccc8e3968bf5b3746ce66b1d1b173; ct0=354e229d191f30df9837d933bba2ed9e6ea9f18e234b0737be90f4bbfa5d94b7598670be83ea3abf4f4d3a615135839ad055705230d74f3b71585f0724cc1616c0bc6472662a8f1eb03babf44ed919de; twid=u%3D1798794651178291200; guest_id_marketing=v1%3A170966731960022089; guest_id_ads=v1%3A170966731960022089; lang=en; d_prefs=MjoxLGNvbnNlbnRfdmVyc2lvbjoyLHRleHRfdmVyc2lvbjoxMDAw; personalization_id="v1_2eWvRpEgQDTL1XGiXmMFpg=="',
-    "Sec-Ch-Ua": """-Not.A/Brand"";v=""8"", ""Chromium"";v=""102""",
+    "Cookie": 'guest_id=v1%3A173612475719932019; kdt=oJYgBMZ9CGAkM8NFGtVrC27Ga4tHh8zIZXanJbGC; auth_token=6dd141f0f70c570e140bfc79ff4f05aba21c7da5; dnt=1; twid=u%3D1499214330172252165; guest_id_marketing=v1%3A173612475719932019; guest_id_ads=v1%3A173612475719932019; __cf_bm=tukzuVHE8GBK6t4zvalOUUnncF4nbhX9JymMs4LrfK4-1742832732-1.0.1.1-irRK4EhsliqGXeL7j2SmqslvgsCUY4gvEKAi5NXdR7WL5xJojDASn616E8bp0WnjNeO0rreZ0JmI1S4I7SA8JBFssPIuc32i3S0Ina336zE; lang=en; d_prefs=MjoxLGNvbnNlbnRfdmVyc2lvbjoyLHRleHRfdmVyc2lvbjoxMDAw; personalization_id="v1_U8mniGmDGiGkseSdh5k88w=="; ct0=c93b1c9d3a9439b5cd17af161a11f3c1b9b012a65aa26793e0913f44cf56810f951b39733e66a32fc4a0888abc7ecef3bcfe2090fd0a43476e5750bbd915e8cbb89ca9cb01e2fa127f97ce1e6727244f',
+    "Sec-Ch-Ua": """Chromium";v="134", "Not:A-Brand";v="24", "Brave";v="134""",
     "X-Twitter-Client-Language": "en",
-    "X-Csrf-Token": "354e229d191f30df9837d933bba2ed9e6ea9f18e234b0737be90f4bbfa5d94b7598670be83ea3abf4f4d3a615135839ad055705230d74f3b71585f0724cc1616c0bc6472662a8f1eb03babf44ed919de",
+    "X-Csrf-Token": "c93b1c9d3a9439b5cd17af161a11f3c1b9b012a65aa26793e0913f44cf56810f951b39733e66a32fc4a0888abc7ecef3bcfe2090fd0a43476e5750bbd915e8cbb89ca9cb01e2fa127f97ce1e6727244f",
     "Sec-Ch-Ua-Mobile": "?0",
     "Authorization": "Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA",
     "Content-Type": "application/json",
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36",
     "X-Twitter-Auth-Type": "OAuth2Session",
     "X-Twitter-Active-User": "yes",
-    "Sec-Ch-Ua-Platform": """macOS""",
+    "Sec-Ch-Ua-Platform": """Windows""",
     "Accept": "*/*",
     "Sec-Fetch-Site": "same-origin",
     "Sec-Fetch-Mode": "cors",
     "Sec-Fetch-Dest": "empty",
-    "Referer": "https://twitter.com/markus",
+    "Referer": "https://twitter.com/nxyylol",
     "Accept-Encoding": "gzip, deflate",
     "Accept-Language": "en-GB,en-US;q=0.9,en;q=0.8",
 }

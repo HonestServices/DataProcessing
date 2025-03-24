@@ -25,7 +25,7 @@ class BlackBoxService(BaseService):
         self.redis = redis
         self.ttl = ttl
         super().__init__("BlackBox", self.redis, self.ttl)
-        self.session_id = "567aa5e4-a01b-4f3e-b77b-1a175baacb55"
+        self.session_id = "98a437c6-22eb-4583-af8d-cab6c6842db2"
         self.user_id = "65d93bbc9ba56f00325371f2"
 
     async def __prompt(self, prompt: str, expert: str = "") -> str:
@@ -99,8 +99,8 @@ class BlackBoxService(BaseService):
         )
         async with ClientSession(
             cookies={
-                "sessionId": "3d98c46f-aa8c-4eda-bed5-16e956316d3e",
-                "__Host-authjs.csrf-token": "9b8f5513e7b1e00b381f9dd03095db5c6c73ecf80ec2562b7e36f020d3ec0545%7Cc3f6af3eebc9bc84533d55a8fc9c59247de66044c17fae82a8283e1d1014cf11",
+                "sessionId": {self.session_id},
+                "__Host-authjs.csrf-token": "07ac7d6e2f339f1f95d780460da3f45a2bb5b7de234a5af9aa6ec85878d2481c%7Cfe261e5ae2b8a58337095e0911b5411ece1994c4d7916b9a4b7073d5a7771846",
                 "__Secure-authjs.callback-url": "https%3A%2F%2Fwww.blackbox.ai",
             }
         ) as session:
@@ -108,20 +108,20 @@ class BlackBoxService(BaseService):
             headers = {
                 "accept": "*/*",
                 "accept-encoding": "gzip, deflate, br, zstd",
-                "accept-language": "en-US,en;q=0.7",
+                "accept-language": "en-US,en;q=0.6",
                 "cache-control": "no-cache",
                 "origin": "https://www.blackbox.ai",
                 "pragma": "no-cache",
                 "priority": "u=1, i",
                 "referer": "https://www.blackbox.ai/",
-                "sec-ch-ua": '"Brave";v="131", "Chromium";v="131", "Not_A Brand";v="24"',
+                "sec-ch-ua": '"Chromium";v="134", "Not:A-Brand";v="24", "Brave";v="134"',
                 "sec-ch-ua-mobile": "?0",
                 "sec-ch-ua-platform": '"Windows"',
                 "sec-fetch-dest": "empty",
                 "sec-fetch-mode": "cors",
                 "sec-fetch-site": "same-origin",
                 "sec-gpc": "1",
-                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",
             }
 
             # First POST request
@@ -183,22 +183,22 @@ class BlackBoxService(BaseService):
         ret = ret.replace("<br>", "")
         ret = (
             ret.replace(", try unlimited chat https://www.blackbox.ai/", "")
-            .replace("blackbox.ai", "rival.rocks")
-            .replace("blackbox", "rival")
+            .replace("blackbox.ai", "honest.rocks")
+            .replace("blackbox", "honest")
         )
         return ret
 
     async def browser_prompt(self, prompt: str, expert: str = "") -> str:
         async def execute():
             if not hasattr(self, "cookies"):
-                with open("/root/www.blackbox.ai.cookies.json", "r") as f:
+                with open("/root/cookies/www.blackbox.ai.cookies.json", "r") as f:
                     self.cookies = json.load(f)
             loop = asyncio.get_running_loop()
             fut = loop.create_future()
             async with async_playwright() as p:
                 browser = await p.chromium.launch(headless=True)
                 context = await browser.new_context(
-                    user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+                    user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
                 )
                 await context.add_cookies(self.cookies)
                 page = await context.new_page()
@@ -244,8 +244,8 @@ class BlackBoxService(BaseService):
             ret = ret.replace("<br>", "")
             ret = (
                 ret.replace(", try unlimited chat https://www.blackbox.ai/", "")
-                .replace("blackbox.ai", "rival.rocks")
-                .replace("blackbox", "rival")
+                .replace("blackbox.ai", "honest.rocks")
+                .replace("blackbox", "honest")
             )
             return ret
 

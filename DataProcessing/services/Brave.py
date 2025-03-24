@@ -48,7 +48,7 @@ async def get_3proxy_ports():
 async def get_random_proxy():
     ports = await get_3proxy_ports()
     port = random.choice(ports)
-    return f"http://admin:admin@127.0.0.1:{port}"
+    return f"http://honest:isrockingfr@127.0.0.1:{port}"
 
 
 def format_factsheet(data: list):

@@ -75,7 +75,7 @@ async def get_proxy_ports():
 async def get_random_proxy():
     ports = await get_proxy_ports()
     port = random.choice(ports)
-    return f"http://admin:admin@127.0.0.1:{port}"
+    return f"http://honest:isrockingfr@127.0.0.1:{port}"
 
 
 def url_to_mime(url) -> Tuple[Optional[str], str]:
@@ -164,7 +164,7 @@ class InstagramService(BaseService):
         self.redis = redis
         self.ttl = ttl
         self.cookies = None
-        self.cookies_file = "/root/www.instagram.com.cookies.json"
+        self.cookies_file = "/root/cookies/www.instagram.com.cookies.json"
         super().__init__("Instagram", self.redis, self.ttl)
 
     def load_cookies_from_file(self, cookies_file: str):
