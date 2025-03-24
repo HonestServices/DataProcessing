@@ -1,10 +1,12 @@
+from random import choice, randrange
+from typing import Any, List, Optional, Union
+
+import langcodes
 from aiohttp import ClientSession as Session
 from bs4 import BeautifulSoup
-from random import choice, randrange
-import langcodes
-from ..models import TranslationResponse
-from typing import Optional, Union, List, Any
 from redis.asyncio import Redis
+
+from ..models import TranslationResponse
 from .Base import BaseService, cache
 
 

@@ -1,15 +1,17 @@
-from playwright.async_api import async_playwright, Request
-from redis.asyncio import Redis
-from .Base import BaseService, cache
-from typing import Optional
-from regex.regex import Pattern
-import regex as re
-from bs4 import BeautifulSoup
-import orjson
-from aiohttp import ClientSession
-from .TT import TikTok
-import json
 import asyncio
+import json
+from typing import Optional
+
+import orjson
+import regex as re
+from aiohttp import ClientSession
+from bs4 import BeautifulSoup
+from playwright.async_api import Request, async_playwright
+from redis.asyncio import Redis
+from regex.regex import Pattern
+
+from .Base import BaseService, cache
+from .TT import TikTok
 
 AWME_RE: Pattern[str] = re.compile(
     r"https?://www\.tiktok\.com/(?:embed|@(?P<user_id>[\w\.-]+)/video)/(?P<id>\d+)"

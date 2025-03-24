@@ -1,12 +1,14 @@
-from .Base import BaseService, cache
-from redis.asyncio import Redis
-from typing import Optional, Any
-from ..models.Kick.channel import KickChannel
+from asyncio import sleep
+from typing import Any, Optional
+
 from aiohttp import ClientSession
 from loguru import logger
 from orjson import JSONDecodeError
+from redis.asyncio import Redis
+
 from .._impl.exceptions import InvalidUser
-from asyncio import sleep
+from ..models.Kick.channel import KickChannel
+from .Base import BaseService, cache
 
 HEADERS = {
     "Accept": "application/json",

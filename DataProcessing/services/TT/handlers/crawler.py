@@ -32,25 +32,18 @@
 #
 # ==============================================================================
 
-import httpx
-import json
 import asyncio
+import json
 import re
 
+import httpx
 from httpx import Response
-
 from loguru import logger
-from .api_exceptions import (
-    APIError,
-    APIConnectionError,
-    APIResponseError,
-    APITimeoutError,
-    APIUnavailableError,
-    APIUnauthorizedError,
-    APINotFoundError,
-    APIRateLimitError,
-    APIRetryExhaustedError,
-)
+
+from .api_exceptions import (APIConnectionError, APIError, APINotFoundError,
+                             APIRateLimitError, APIResponseError,
+                             APIRetryExhaustedError, APITimeoutError,
+                             APIUnauthorizedError, APIUnavailableError)
 
 
 class BaseCrawler:

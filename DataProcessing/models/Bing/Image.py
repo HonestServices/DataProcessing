@@ -4,9 +4,10 @@
   Discord: aiohttp
 """
 
-from discord import Embed, Color
+from typing import Any, Dict, List, Optional
+
+from discord import Color, Embed
 from pydantic import BaseModel
-from typing import Optional, List, Dict, Any
 
 
 class Resolution(BaseModel):

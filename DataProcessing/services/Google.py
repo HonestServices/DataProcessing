@@ -1,17 +1,19 @@
-from redis.asyncio import Redis
-from .Base import BaseService, cache
-from typing import Optional, Dict, Any, List
-from aiohttp import ClientSession
-from playwright.async_api import async_playwright
 import asyncio
-from urllib.parse import urlparse
 import random
-from pydantic import BaseModel
-from typing_extensions import NoReturn, Self
-from tuuid import tuuid
 import re
+from typing import Any, Dict, List, Optional
+from urllib.parse import urlparse
+
+from aiohttp import ClientSession
 from loguru import logger
 from lxml import html
+from playwright.async_api import async_playwright
+from pydantic import BaseModel
+from redis.asyncio import Redis
+from tuuid import tuuid
+from typing_extensions import NoReturn, Self
+
+from .Base import BaseService, cache
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0",

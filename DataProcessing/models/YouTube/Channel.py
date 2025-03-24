@@ -1,11 +1,12 @@
 from __future__ import annotations
 
-from typing import List, Optional
-from typing_extensions import Self
-from pydantic import BaseModel
 import re
+from typing import List, Optional
+
 from aiohttp import ClientSession
 from loguru import logger as log
+from pydantic import BaseModel
+from typing_extensions import Self
 
 CHANNEL_LOOKUPS = {
     "BY_ID": "https://pipedapi.kavin.rocks/channel/",

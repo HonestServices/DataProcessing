@@ -1,18 +1,16 @@
+from itertools import cycle, islice
+from typing import Any, Dict, List, Optional
+
+from aiohttp import ClientSession
 from lxml import html
 from playwright.async_api import async_playwright
 from redis.asyncio import Redis
+
+from ..models.DuckDuckGo import (DuckDuckGoImageResponse,
+                                 DuckDuckGoSearchResponse)
+from ..utils import (_extract_vqd, _normalize, _normalize_url,
+                     _text_extract_json, json_loads)
 from .Base import BaseService, cache
-from typing import Optional, List, Dict, Any
-from ..utils import (
-    _text_extract_json,
-    _extract_vqd,
-    _normalize_url,
-    _normalize,
-    json_loads,
-)
-from aiohttp import ClientSession
-from ..models.DuckDuckGo import DuckDuckGoImageResponse, DuckDuckGoSearchResponse
-from itertools import cycle, islice
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36",

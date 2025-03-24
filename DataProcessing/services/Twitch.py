@@ -1,9 +1,11 @@
-from .Base import BaseService, Redis, Optional, logger, cache
-from asyncio import sleep, ensure_future
-from typing import Any
-from aiohttp import ClientSession
-from ..models.Twitch import Channel, ChannelResponse, Stream, StreamResponse
+from asyncio import ensure_future, sleep
 from os import environ
+from typing import Any
+
+from aiohttp import ClientSession
+
+from ..models.Twitch import Channel, ChannelResponse, Stream, StreamResponse
+from .Base import BaseService, Optional, Redis, cache, logger
 
 USER_URL = "https://api.twitch.tv/helix/users?login={}"
 STREAM_URL = "https://api.twitch.tv/helix/streams?user_id={}"

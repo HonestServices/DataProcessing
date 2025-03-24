@@ -1,4 +1,5 @@
 import re
+
 from aiohttp import ClientSession
 
 TIKTOK_URL_PATTERN = re.compile(

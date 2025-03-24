@@ -1,14 +1,15 @@
-from redis.asyncio import Redis
-from .Base import BaseService, cache
-from tools import timeit
-from typing import Optional
-from aiohttp import ClientSession
-from playwright.async_api import async_playwright, Request, Response
-from playwright._impl._errors import TargetClosedError
-from contextlib import suppress
-import json
 import asyncio
+import json
+from contextlib import suppress
+from typing import Optional
 
+from aiohttp import ClientSession
+from playwright._impl._errors import TargetClosedError
+from playwright.async_api import Request, Response, async_playwright
+from redis.asyncio import Redis
+from tools import timeit
+
+from .Base import BaseService, cache
 
 try:
     from asyncio import timeout

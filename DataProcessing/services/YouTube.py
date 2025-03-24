@@ -1,8 +1,10 @@
-from redis.asyncio import Redis
-from .Base import BaseService, cache
 from typing import Optional
-from ..models.YouTube import YouTubeChannel, YouTubeFeed
+
+from redis.asyncio import Redis
+
 from .._impl.exceptions import InvalidUser
+from ..models.YouTube import YouTubeChannel, YouTubeFeed
+from .Base import BaseService, cache
 
 
 class YouTubeService(BaseService):

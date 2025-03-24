@@ -1,13 +1,15 @@
-from .Base import BaseService, cache
-from typing import Optional, Union
-from aiohttp import ClientSession
-from redis.asyncio import Redis
-from ..models.Twitter import Tweet, TwitterUser, Tweets
-from ..utils import get_random_string
-from .._impl.Twitter.twitter import UserNotFound, UserSuspended, TweetNotFound
+import json
 import random
 import re
-import json
+from typing import Optional, Union
+
+from aiohttp import ClientSession
+from redis.asyncio import Redis
+
+from .._impl.Twitter.twitter import TweetNotFound, UserNotFound, UserSuspended
+from ..models.Twitter import Tweet, Tweets, TwitterUser
+from ..utils import get_random_string
+from .Base import BaseService, cache
 
 REQUEST_USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
 REQUEST_PLATFORMS = ["Linux", "Windows"]

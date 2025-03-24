@@ -6,7 +6,7 @@ from html import unescape
 from io import BytesIO
 from json import dumps
 from logging import getLogger
-from typing import List, Literal, Optional, Any
+from typing import Any, List, Literal, Optional
 
 from cashews import cache
 from discord import File

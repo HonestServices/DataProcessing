@@ -8,8 +8,9 @@ from pydantic import BaseModel
 from typing_extensions import Self
 
 cache.setup("mem://")
-from .base import API, ClientSession
 from discord.ext.commands import Context
+
+from .base import API, ClientSession
 
 ENDPOINT = API["graphql"]["UserByScreenName"]
 

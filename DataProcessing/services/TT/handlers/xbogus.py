@@ -33,9 +33,9 @@
 # ==============================================================================
 
 
-import time
 import base64
 import hashlib
+import time
 
 
 class XBogus:
@@ -55,7 +55,7 @@ class XBogus:
         self.user_agent = (
             user_agent
             if user_agent is not None and user_agent != ""
-            else "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0"
+            else "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
         )
 
     def md5_str_to_array(self, md5_str):

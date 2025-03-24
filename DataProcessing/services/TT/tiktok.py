@@ -1,25 +1,16 @@
-from aiohttp import ClientSession, TCPConnector
-from typing import Any, Literal, List, Union, Optional
-from .handlers import (
-    get_aweme_id,
-    BogusManager,
-    PostDetail,
-    TikTokAPIEndpoints,
-    BaseCrawler,
-    UserProfile,
-    UserPost,
-)
-from .models import (
-    TikTokUserFeedResponse,
-    TikTokUserProfileResponse,
-    TikTokPostResponse,
-)
-from .models.post import PlayAddrrr, BitrateInfoItem
-from random import choice
-
 import os
-import yaml
 import re
+from random import choice
+from typing import Any, List, Literal, Optional, Union
+
+import yaml
+from aiohttp import ClientSession, TCPConnector
+
+from .handlers import (BaseCrawler, BogusManager, PostDetail,
+                       TikTokAPIEndpoints, UserPost, UserProfile, get_aweme_id)
+from .models import (TikTokPostResponse, TikTokUserFeedResponse,
+                     TikTokUserProfileResponse)
+from .models.post import BitrateInfoItem, PlayAddrrr
 
 path = os.path.abspath(os.path.dirname(__file__))
 if "\\" in str(path):

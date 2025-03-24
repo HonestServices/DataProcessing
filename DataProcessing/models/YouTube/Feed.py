@@ -6,10 +6,10 @@ from __future__ import annotations
 
 from typing import Any, Dict, List, Optional
 
+import feedparser
+from aiohttp import ClientSession
 from pydantic import BaseModel
 from typing_extensions import Self
-from aiohttp import ClientSession
-import feedparser
 
 
 class TitleDetail(BaseModel):

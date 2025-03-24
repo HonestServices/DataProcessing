@@ -1,10 +1,11 @@
 import random
-import string
-import orjson
-from typing import Any, List, Dict, Union
-from html import unescape
-from urllib.parse import unquote
 import re
+import string
+from html import unescape
+from typing import Any, Dict, List, Union
+from urllib.parse import unquote
+
+import orjson
 
 REGEX_STRIP_TAGS = re.compile("<.*?>")
 

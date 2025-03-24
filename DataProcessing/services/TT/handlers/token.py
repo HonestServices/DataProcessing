@@ -1,28 +1,19 @@
+import asyncio
+import json
 import os
 import re
-import json
-import yaml
-import httpx
-import asyncio
-
-from typing import Union
 from pathlib import Path
+from typing import Union
 
+import httpx
+import yaml
 from loguru import logger
+
+from .api_exceptions import (APIConnectionError, APIError, APINotFoundError,
+                             APIResponseError, APIUnauthorizedError)
+from .utils import (extract_valid_urls, gen_random_str, get_timestamp,
+                    split_filename)
 from .xbogus import XBogus as XB
-from .utils import (
-    gen_random_str,
-    get_timestamp,
-    extract_valid_urls,
-    split_filename,
-)
-from .api_exceptions import (
-    APIError,
-    APIConnectionError,
-    APIResponseError,
-    APIUnauthorizedError,
-    APINotFoundError,
-)
 
 # yayayayaya
 # Read the configuration file
