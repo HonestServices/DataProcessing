@@ -195,7 +195,7 @@ class InstagramService(BaseService):
         async with async_playwright() as p:
             browser = await p.chromium.launch(headless=True)
             context = await browser.new_context(
-                user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+                user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",
                 proxy={"server": await get_random_proxy()},
             )
             page = await context.new_page()
@@ -229,7 +229,7 @@ class InstagramService(BaseService):
         async with async_playwright() as p:
             browser = await p.chromium.launch(headless=True)
             context = await browser.new_context(
-                user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+                user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",
                 proxy={"server": await get_random_proxy()},
             )
             await self.load_cookies_into_browser(context)
@@ -252,7 +252,7 @@ class InstagramService(BaseService):
             async with async_playwright() as p:
                 browser = await p.chromium.launch(headless=True)
                 context = await browser.new_context(
-                    user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+                    user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",
                     proxy={"server": await get_random_proxy()},
                 )
                 page = await context.new_page()
@@ -305,8 +305,7 @@ class InstagramService(BaseService):
                         f"https://www.instagram.com/{username}",
                         wait_until="domcontentloaded",
                     )
-                    async with timeout(40):
-                        data = await fut
+                    data = await fut
                     if data is False:
                         log.warning("Returning invalid user for {}", username)
                         await browser.close()
@@ -357,7 +356,7 @@ class InstagramService(BaseService):
             async with async_playwright() as p:
                 browser = await p.chromium.launch(headless=False)
                 context = await browser.new_context(
-                    user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+                    user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",
                     proxy={"server": await get_random_proxy()},
                 )
                 await self.load_cookies_into_browser(context)
@@ -498,7 +497,7 @@ class InstagramService(BaseService):
         async with async_playwright() as p:
             browser = await p.chromium.launch(headless=False)
             context = await browser.new_context(
-                user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+                user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",
                 proxy={"server": await get_random_proxy()},
             )
             await self.load_cookies_into_browser(context)
@@ -566,7 +565,7 @@ class InstagramService(BaseService):
         async with async_playwright() as p:
             browser = await p.chromium.launch(headless=False)
             context = await browser.new_context(
-                user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+                user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",
                 proxy={"server": await get_random_proxy()},
             )
             await self.load_cookies_into_browser(context)
