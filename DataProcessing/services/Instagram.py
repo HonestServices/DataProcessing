@@ -303,7 +303,7 @@ class InstagramService(BaseService):
                 try:
                     await page.goto(
                         f"https://www.instagram.com/{username}",
-                        wait_until="domcontentloaded",
+                        wait_until="load",
                     )
                     data = await fut
                     if data is False:
