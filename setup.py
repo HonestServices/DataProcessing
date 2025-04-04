@@ -9,9 +9,9 @@ def parse_requirements(filename):
 
 setup(
     name="DataProcessing",
-    version="1.0.0",  # Update version as needed
+    version="1.0.1",  # Update version as needed
     description="A package for scraping web services and processing data.",
-    author="HonestServices",  # Replace with your name
+    author="nxyystore",  # Replace with your name
     author_email="nxyy@nxyy.store",  # Replace with your email
     url="https://github.com/HonestServices/DataProcessing",  # Replace with your repository URL
     packages=find_packages(),
