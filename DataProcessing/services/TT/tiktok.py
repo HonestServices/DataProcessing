@@ -12,13 +12,8 @@ from .models import (TikTokPostResponse, TikTokUserFeedResponse,
                      TikTokUserProfileResponse)
 from .models.post import BitrateInfoItem, PlayAddrrr
 
-path = os.path.abspath(os.path.dirname(__file__))
-if "\\" in str(path):
-    splitting_char = "\\"
-else:
-    splitting_char = "/"
 
-with open(f"{path}{splitting_char}config.yaml", "r", encoding="utf-8") as f:
+with open(f"config.yaml", "r", encoding="utf-8") as f:
     config = yaml.safe_load(f)
 
 
