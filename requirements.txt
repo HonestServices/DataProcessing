@@ -1,1 +1,14 @@
 pyotp
+urllib3
+orjson
+redis
+aiohttp
+asyncio
+playwright
+loguru
+bs4
+pydantic
+httpx
+datetime
+browser_cookie3
+importlib_resources
