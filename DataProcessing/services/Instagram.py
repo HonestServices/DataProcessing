@@ -75,7 +75,7 @@ async def get_proxy_ports():
 async def get_random_proxy():
     ports = await get_proxy_ports()
     port = random.choice(ports)
-    return f"http://honest:isrockingfr@0.0.0.0:{port}"
+    return f"http://honest:isrockingfr@127.0.0.1:{port}"
 
 
 def url_to_mime(url) -> Tuple[Optional[str], str]:

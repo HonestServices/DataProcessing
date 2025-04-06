@@ -73,7 +73,7 @@ class TikTok:
         as_text = kwargs.pop("as_text", False)
         self.last_request = {"method": method, "url": url, "headers": headers, **kwargs}
         data = None
-        async with ClientSession(connector=TCPConnector(verify_ssl=False)) as session:
+        async with ClientSession(connector=TCPConnector) as session:
             async with session.request(
                 method, url, headers=headers, **kwargs
             ) as response:
