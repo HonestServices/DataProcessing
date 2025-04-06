@@ -164,7 +164,7 @@ class InstagramService(BaseService):
         self.redis = redis
         self.ttl = ttl
         self.cookies = None
-        self.cookies_file = "/root/cookies/www.instagram.com.cookies.json"
+        self.cookies_file = "/root/cookies/instagram.com.cookies.json"
         super().__init__("Instagram", self.redis, self.ttl)
 
     def load_cookies_from_file(self, cookies_file: str):
@@ -303,7 +303,7 @@ class InstagramService(BaseService):
                 try:
                     await page.goto(
                         f"https://www.instagram.com/{username}",
-                        wait_until="load",
+                        wait_until="domcontentloaded",
                     )
                     data = await fut
                     if data is False:
