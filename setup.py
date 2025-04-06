@@ -9,7 +9,7 @@ def parse_requirements(filename):
 
 setup(
     name="DataProcessing",
-    version="1.0.1.2",  # Update version as needed
+    version="1.0.1.3",  # Update version as needed
     description="A package for scraping web services and processing data.",
     author="nxyystore",  # Replace with your name
     author_email="nxyy@nxyy.store",  # Replace with your email
